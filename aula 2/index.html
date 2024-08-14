@@ -1,0 +1,47 @@
+<!--Testar os diferentes controles para formulários.
+Faça uma página HTML simples que contenha um formulário. Ele deve ser sobre um assunto específico, combinando com o resto da página. Este formulário deve ter os seguintes elementos: select (com 5 opções); checkbox (com pelo menos 2 opções); textarea (com tamanho definido); inputs (text, submit, reset, password).-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario de esporte favorito</title>
+</head>
+
+<body>
+    <h1>Cadastro de esporte favorito</h1>
+    <form action="#" method="GET">
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="name" required>
+        <br><br>
+
+        <label for="autor">idade:</label>
+        <input type="text" id="age" name="idade" required>
+        <br><br>
+
+        <label for="genero">Gênero:</label>
+        <select id="genero" name="genero" required>
+            <option value="masculino">masculino</option>
+            <option value="feminino">feminino</option>
+        </select>
+        <br><br>
+
+
+        <label for="descricao">comentario:</label>
+        <textarea id="comentario" name="comentario" rows="5" cols="30" required></textarea>
+        <br>
+
+        <label for="senha">Senha para concluir cadastro:</label>
+        <input type="password" id="senha" name="senha" required>
+        <br><br>
+
+        <input type="submit" value="Cadastrar">
+        <input type="reset" value="Limpar">
+
+    </form>
+</body>
+
+</html>
