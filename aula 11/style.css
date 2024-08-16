@@ -1,0 +1,96 @@
+/* Reset básico para garantir que a aparência seja consistente */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main container */
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Sidebar */
+aside {
+    width: 200px;
+    background: #f4f4f4;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+aside h2 {
+    margin-bottom: 10px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Conteúdo principal */
+.content {
+    flex: 1;
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
