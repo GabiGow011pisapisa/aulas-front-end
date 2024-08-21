@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Caracteres</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .resultado {
+            font-size: 18px;
+            color: #333;
+            padding: 10px;
+            border: 1px solid #ddd;
+            width: 200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="campoTexto" placeholder="Digite algo..." onkeyup="contarCaracteres()">
+        <div class="resultado" id="resultado">Número de caracteres: 0</div>
+    </div>
+
+    <script>
+        function contarCaracteres() {
+            // Captura o valor do campo de texto
+            let texto = document.getElementById('campoTexto').value;
+            // Captura o elemento <div> onde o número de caracteres será exibido
+            let resultado = document.getElementById('resultado');
+            // Atualiza o conteúdo da <div> com o número de caracteres
+            resultado.innerHTML = 'Número de caracteres: ' + texto.length;
+        }
+    </script>
+</body>
+</html>

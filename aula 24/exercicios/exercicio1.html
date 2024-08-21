@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Dinâmica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista Dinâmica</h1>
+    <input type="text" id="itemInput" placeholder="Digite um item">
+    <button id="addItemButton">Adicionar Item</button>
+    <button id="removeItemButton">Remover Último Item</button>
+    
+    <ul id="itemList"></ul>
+
+    <script>
+        // Selecionar os elementos do DOM
+        const itemInput = document.getElementById('itemInput');
+        const addItemButton = document.getElementById('addItemButton');
+        const removeItemButton = document.getElementById('removeItemButton');
+        const itemList = document.getElementById('itemList');
+
+        // Função para adicionar um item à lista
+        function addItem() {
+            const itemText = itemInput.value.trim();
+            if (itemText) {
+                // Criar um novo elemento <li>
+                const newItem = document.createElement('li');
+                newItem.textContent = itemText;
+
+                // Adicionar o novo item à lista
+                itemList.appendChild(newItem);
+
+                // Limpar o campo de input
+                itemInput.value = '';
+            } else {
+                alert('Por favor, digite um item.');
+            }
+        }
+
+        // Função para remover o último item da lista
+        function removeLastItem() {
+            if (itemList.hasChildNodes()) {
+                // Remover o último item da lista
+                itemList.removeChild(itemList.lastChild);
+            } else {
+                alert('A lista está vazia.');
+            }
+        }
+
+        // Adicionar eventos de clique aos botões
+        addItemButton.addEventListener('click', addItem);
+        removeItemButton.addEventListener('click', removeLastItem);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar/Esconder Texto</title>
+    <style>
+        #texto {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p id="texto">Este é um parágrafo de exemplo. Você pode usar os botões abaixo para esconder ou mostrar este texto. Aproveite para testar a funcionalidade dos botões e ver como eles alteram a visibilidade do parágrafo.</p>
+    <button onclick="esconderTexto()">Esconder Texto</button>
+    <button onclick="mostrarTexto()">Mostrar Texto</button>
+
+    <script>
+        function esconderTexto() {
+            document.getElementById('texto').style.display = 'none';
+        }
+
+        function mostrarTexto() {
+            document.getElementById('texto').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

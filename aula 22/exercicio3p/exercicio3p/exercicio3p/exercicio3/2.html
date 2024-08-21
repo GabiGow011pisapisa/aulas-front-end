@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Regressiva</title>
+    <script>
+        function contagemRegressiva() {
+            // Obtém o valor do campo de entrada e converte para um número inteiro
+            const numero = parseInt(document.getElementById('numero').value, 10);
+            
+            // Verifica se o número é válido
+            if (isNaN(numero) || numero <= 0) {
+                console.log("Por favor, insira um número válido maior que 0.");
+                return;
+            }
+            
+            // Laço while para fazer a contagem regressiva
+            let contagem = numero;
+            while (contagem >= 0) {
+                console.log(contagem);
+                contagem--;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Contagem Regressiva</h1>
+    <p>Digite um número para iniciar a contagem regressiva:</p>
+    <input type="number" id="numero" min="1" />
+    <button onclick="contagemRegressiva()">Iniciar Contagem</button>
+</body>
+</html>

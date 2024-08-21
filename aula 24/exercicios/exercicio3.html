@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incrementar e Decrementar Número</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="number">0</p>
+        <button onclick="decrement()">Decrementar</button>
+        <button onclick="increment()">Incrementar</button>
+    </div>
+
+    <script>
+        let currentNumber = 0;
+
+        function updateDisplay() {
+            document.getElementById('number').innerHTML = currentNumber;
+        }
+
+        function increment() {
+            currentNumber++;
+            updateDisplay();
+        }
+
+        function decrement() {
+            currentNumber--;
+            updateDisplay();
+        }
+    </script>
+</body>
+</html>

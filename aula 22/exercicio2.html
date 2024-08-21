@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converte Nota</title>
+    <script>
+        function converteNota() {
+            // Obtém o valor do campo de entrada e converte para um número inteiro
+            const nota = parseInt(document.getElementById('nota').value, 10);
+
+            // Variável para armazenar o conceito
+            let conceito;
+
+            // Usando switch para determinar o conceito com base na nota
+            switch (nota) {
+                case 5:
+                    conceito = 'A';
+                    break;
+                case 4:
+                    conceito = 'B';
+                    break;
+                case 3:
+                    conceito = 'C';
+                    break;
+                case 2:
+                    conceito = 'D';
+                    break;
+                case 1:
+                    conceito = 'E';
+                    break;
+                case 0:
+                    conceito = 'F';
+                    break;
+                default:
+                    conceito = 'Nota inválida';
+                    break;
+            }
+
+            // Atualiza o conteúdo do elemento com o id 'resultado'
+            document.getElementById('resultado').innerText = conceito;
+        }
+    </script>
+</head>
+<body>
+    <h1>Converte Nota</h1>
+    <p>Digite uma nota de 0 a 5:</p>
+    <input type="number" id="nota" min="0" max="5" />
+    <button onclick="converteNota()">Converter</button>
+    <p id="resultado"></p>
+</body>
+</html>

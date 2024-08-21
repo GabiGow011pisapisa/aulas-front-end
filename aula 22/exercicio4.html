@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script>
+        function calculadora(num1, num2, operacao) {
+            let resultado;
+
+            // Verifica a operação e calcula o resultado
+            switch (operacao) {
+                case '+':
+                    resultado = num1 + num2;
+                    break;
+                case '-':
+                    resultado = num1 - num2;
+                    break;
+                case '*':
+                    resultado = num1 * num2;
+                    break;
+                case '/':
+                    // Verifica se o divisor é zero
+                    if (num2 === 0) {
+                        resultado = "Divisão por zero não é permitida";
+                    } else {
+                        resultado = num1 / num2;
+                    }
+                    break;
+                default:
+                    resultado = "Operação inválida";
+                    break;
+            }
+
+            return resultado;
+        }
+
+        function realizarCalculo() {
+            // Obtém os valores dos campos de entrada
+            const numero1 = parseFloat(document.getElementById('numero1').value);
+            const numero2 = parseFloat(document.getElementById('numero2').value);
+            const operacao = document.getElementById('operacao').value;
+
+            // Calcula o resultado
+            const resultado = calculadora(numero1, numero2, operacao);
+
+            // Exibe o resultado
+            document.getElementById('resultado').innerText = `Resultado: ${resultado}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <p>Digite os números e selecione a operação:</p>
+    <input type="number" id="numero1" step="any" placeholder="Número 1" />
+    <input type="number" id="numero2" step="any" placeholder="Número 2" />
+    <select id="operacao">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <button onclick="realizarCalculo()">Calcular</button>
+    <p id="resultado"></p>
+</body>
+</html>

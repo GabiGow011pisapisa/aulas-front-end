@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Texto</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="inputText" placeholder="Digite algo...">
+        <button onclick="mostrarTexto()">Mostrar Texto</button>
+        <p id="resultado">Aqui aparecerá o texto.</p>
+    </div>
+
+    <script>
+        function mostrarTexto() {
+            // Captura o valor do campo de texto
+            let texto = document.getElementById('inputText').value;
+            // Captura o elemento <p> onde o texto será exibido
+            let paragrafo = document.getElementById('resultado');
+
+            // Verifica se o campo de texto está vazio
+            if (texto.trim() === '') {
+                paragrafo.innerHTML = 'Por favor, insira um texto.';
+            } else {
+                paragrafo.innerHTML = texto;
+            }
+        }
+    </script>
+</body>
+</html>

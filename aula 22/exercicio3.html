@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <script>
+        function tabuada() {
+            // Obtém o valor do campo de entrada e converte para um número inteiro
+            const numero = parseInt(document.getElementById('numero').value, 10);
+            
+            // Obtém o elemento onde a tabuada será exibida
+            const resultado = document.getElementById('resultado');
+            
+            // Verifica se o número é válido
+            if (isNaN(numero) || numero <= 0) {
+                resultado.innerHTML = "Por favor, insira um número válido maior que 0.";
+                return;
+            }
+            
+            // Inicializa a string para armazenar a tabuada
+            let tabuadaStr = `<h2>Tabuada do ${numero}:</h2><ul>`;
+            
+            // Laço para gerar a tabuada de 1 a 10
+            for (let i = 1; i <= 10; i++) {
+                const resultadoTabuada = numero * i;
+                tabuadaStr += `<li>${numero} x ${i} = ${resultadoTabuada}</li>`;
+            }
+            
+            // Fecha a lista
+            tabuadaStr += '</ul>';
+            
+            // Atualiza o conteúdo do elemento com o id 'resultado'
+            resultado.innerHTML = tabuadaStr;
+        }
+    </script>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <p>Digite um número para ver a tabuada:</p>
+    <input type="number" id="numero" min="1" />
+    <button onclick="tabuada()">Gerar Tabuada</button>
+    <div id="resultado"></div>
+</body>
+</html>

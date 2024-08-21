@@ -1,0 +1,39 @@
+<!--Exemplo Prático Completo-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulando DOM</title>
+</head>
+<body>
+  <button id="adicionar">Adicionar Elemento</button>
+  <button id="remover">Remover Elemento</button>
+
+  <script>
+    let elementoCriado;
+
+    // Adiciona novo elemento ao DOM
+    document.getElementById('adicionar').addEventListener('click', function() {
+      if (!elementoCriado) { // Verifica se o elemento já não foi criado
+        elementoCriado = document.createElement('p');
+        elementoCriado.textContent = 'Este é um parágrafo criado dinamicamente!';
+        document.body.appendChild(elementoCriado);
+      }
+    });
+
+    // Remove o elemento do DOM
+    document.getElementById('remover').addEventListener('click', function() {
+      if (elementoCriado) {
+        document.body.removeChild(elementoCriado);
+        elementoCriado = null; // Reseta a variável para poder criar de novo
+      }
+    });
+  </script>
+</body>
+</html>
+
+<!--Explicação do Exemplo:
+Ao clicar no botão "Adicionar Elemento", um parágrafo será criado e adicionado ao body.
+Ao clicar no botão "Remover Elemento", o parágrafo será removido do body.-->

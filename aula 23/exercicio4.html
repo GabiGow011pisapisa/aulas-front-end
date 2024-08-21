@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar Cor do Título</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo">Este é o Título</h1>
+        <button onclick="mudarCor('azul')">Mudar para Azul</button>
+        <button onclick="mudarCor('verde')">Mudar para Verde</button>
+    </div>
+
+    <script>
+        function mudarCor(cor) {
+            // Captura o elemento <h1> pelo ID
+            let titulo = document.getElementById('titulo');
+            // Altera a cor do texto do título para a cor fornecida
+            if (cor === 'azul') {
+                titulo.style.color = 'blue';
+            } else if (cor === 'verde') {
+                titulo.style.color = 'green';
+            }
+        }
+    </script>
+</body>
+</html>
